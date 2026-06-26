@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(){
+    int heads = 0;
+    int tails = 0;
+
+    srand(time(NULL));
+
+    printf("Tossing a coin...\n");
+
+    for(int i=0; i<=3; i++){
+        if(rand() % 2 == 0) {
+            printf("Round %d: Heads\n", i);
+            heads++;
+        } else {
+            printf("Round %d: tails\n", i);
+            tails++;
+        }
+    }
+
+    printf("Heads: %d, Tails: %d", heads, tails);
+  
+    return 0;
+}
